@@ -1,0 +1,13 @@
+set serveroutput on;
+
+DECLARE
+	dt Date;
+	str varchar2(10);
+BEGIN
+	dt := '&date'; // 28-APR-2019
+	str := to_char(dt,'DY');
+	CASE
+		when str in ('SAT','SUN') then dbms_output.put_line('Its the Weekend');
+ 		else dbms_output.put_line('Not a Weekend');
+	END CASE;
+END;

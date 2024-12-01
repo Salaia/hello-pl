@@ -1,0 +1,10 @@
+set serveroutput on;
+
+DECLARE
+	num int:=1;
+BEGIN
+	while(num <= 10) LOOP
+		dbms_output.put_line(''|| num);
+		num := num+2;
+	END LOOP;
+END;

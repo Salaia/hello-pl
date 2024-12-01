@@ -1,0 +1,13 @@
+set serveroutput on;
+DECLARE
+	a int;
+	b int;
+BEGIN
+	a := &a;
+	b := mod(a,2);
+	CASE b
+		when 0 then dbms_output.put_line('Even Number');
+		when 1 then dbms_output.put_line('Odd Number');
+ 		else dbms_output.put_line('User has not given any input value to check');
+	END CASE;
+END;

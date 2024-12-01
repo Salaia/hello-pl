@@ -1,0 +1,12 @@
+set serveroutput on;
+
+DECLARE
+	i int;
+BEGIN
+	i := 0;
+	LOOP
+		i := i+2;
+		dbms_output.put_line(i);
+		exit WHEN i >= 10;
+	END LOOP;
+END;

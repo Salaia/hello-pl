@@ -1,0 +1,9 @@
+set serveroutput on;
+DECLARE
+	x int:=10;
+	y int:=80;
+BEGIN
+	if(y>x) then
+		dbms_output.put_line('Result: ' ||y|| ' is greater than ' ||x);
+	end if;
+END;
