@@ -1,0 +1,21 @@
+DECLARE
+   	s_name VARCHAR2(20);
+   	s_age NUMBER(2);
+   	s_address CLOB;
+   	s_gender CHAR(1);
+BEGIN
+   	s_name := 'Sherlock Holmes';
+   	s_age := 21;
+   	s_address := '221B, Baker Street, London';
+   	s_gender := 'M';
+   	IF s_gender = 'M' THEN
+      	dbms_output.put_line(s_name || ' is a student at Studytonight');
+      	dbms_output.put_line('He is ' || s_age || ' years old.');
+      	dbms_output.put_line('He lives at ' || s_address);
+    ELSE
+    	dbms_output.put_line(s_name || ' is a student at Studytonight');
+      	dbms_output.put_line('She is ' || s_age || ' years old.');
+      	dbms_output.put_line('She lives at ' || s_address);
+   END IF;
+END;
+/
