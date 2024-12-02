@@ -1,0 +1,23 @@
+set serveroutput on;
+
+CREATE OR REPLACE FUNCTION SumFunc(a IN number, b IN number) RETURN Number IS
+c number;
+BEGIN
+	c := a+b;
+	RETURN c;
+END;
+
+/
+
+set serveroutput on;
+
+DECLARE
+	no1 number;
+	no2 number;
+	result number;
+BEGIN
+	no1 := &no1;
+	no2 := &no2;
+	result := SumFunc(no1,no2);
+dbms_output.put_line('Sum of two nos='||result);
+END;

@@ -1,0 +1,19 @@
+create or replace PROCEDURE Sum(a IN number, b IN number) IS
+c number;
+BEGIN
+	c := a+b;
+	dbms_output.put_line('Sum of two nos= '|| c);
+END Sum;
+
+/
+
+set serveroutput on;
+
+DECLARE
+	x number;
+	y number;
+BEGIN
+	x := &x;
+	y := &y;
+	Sum(x,y);
+END;

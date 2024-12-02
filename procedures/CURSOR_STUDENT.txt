@@ -1,0 +1,21 @@
+DECLARE
+    CURSOR student_cursor IS
+    SELECT
+        firstname
+    FROM
+        employee;
+
+    snm employee.firstname%TYPE;
+BEGIN
+    OPEN student_cursor;
+    LOOP
+        FETCH student_cursor INTO snm;
+        IF student_cursor%notfound THEN
+            EXIT;
+        END IF;
+        dbms_output.put_line('' || snm);
+    END LOOP;
+
+    dbms_output.put_line('Total Records: ' || student_cursor%rowcount);
+    CLOSE student_cursor;
+END;
