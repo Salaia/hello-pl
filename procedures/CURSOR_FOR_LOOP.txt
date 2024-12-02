@@ -1,0 +1,7 @@
+DECLARE
+	CURSOR employee_cursor IS SELECT firstname FROM Employee;
+BEGIN
+	FOR emp IN employee_cursor LOOP
+		dbms_output.put_line('Employee: ' || emp.firstname);
+	END LOOP;
+END;
